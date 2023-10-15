@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Configuración para pantallas móviles -->
+    <title>Feliz Día, Ma</title>
+    <style>
+        /* Estilo básico para el fondo de la página */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            animation: backgroundAnimation 5s alternate infinite;
+        }
+
+        /* Estilo para el título */
+        h1 {
+            color: #ff6b81;
+            padding: 10px;
+            display: inline-block;
+            animation: titleAnimation 1s alternate infinite, backgroundFill 2s ease-in-out infinite;
+        }
+
+        /* Estilo para el mensaje */
+        p {
+            color: #ff6b81;
+        }
+
+        /* Estilo para la galería de imágenes */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            animation: imageGallery 5s alternate infinite;
+        }
+        .gallery img {
+            max-width: 100%;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes backgroundAnimation {
+            0%, 100% {
+                background-color: #f5e1f5;
+            }
+            50% {
+                background-color: #e0d6f5;
+            }
+        }
+
+        @keyframes titleAnimation {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(5px);
+            }
+        }
+
+        @keyframes backgroundFill {
+            0%, 100% {
+                background-color: #ff6b81;
+            }
+            50% {
+                background-color: #ffc1c1;
+            }
+        }
+
+        /* Estilos para pantallas de celular */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+            }
+            .gallery {
+                flex-direction: column; /* Imágenes una debajo de la otra en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz Día, Ma</h1>
+    <p>Gracias por todo lo que haces por nosotros. No sé ni quiero averiguar lo que haríamos sin vos. Te amo infinitamente y espero algún día poder darte un 1% de lo que vos nos das todos los días. Gracias, viejita 💗</p>
+
+    <div class="gallery">
+        <img src="uno.jpg">
+        <img src="dos.jpg">
+        <img src="tres.jpg">
+        <img src="cuatro.jpg">
+        <img src="cinco.jpg">
+    </div>
+</body>
+</html>
